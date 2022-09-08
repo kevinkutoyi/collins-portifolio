@@ -353,11 +353,8 @@ textarea {
 
 .primary-navigation a > span {
   font-weight: 700;
-<<<<<<< HEAD
   margin-right: 3.5em;
-=======
   margin-right: 4.5em;
->>>>>>> 83f5cb77754c63a50a737229b54a1a4a2b332580
 }
 .mobile-nav-toggle {
   display: none;
@@ -748,18 +745,6 @@ textarea {
   font-size: 1rem;
   margin-left: 10px;
   /* padding: 100px; */
-}
-
-.firstname {
-  /* margin-right: -170%; */
-
-  /* display: block; */
-}
-
-.lastname {
-  /* padding-left: 100px; */
-  /* margin-left: 140%; */
-  display: block;
 }
 
 .reviewstuff {
