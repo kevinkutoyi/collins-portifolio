@@ -233,3 +233,21 @@ submitBtn.addEventListener("click", function () {
     }
   }
 });
+
+async function encryptedSubmitForm(EmailForm) {
+  form = document.forms[EmailForm];
+  form_types = [];
+  for (idx = 0; idx < form.elements.length; idx += 1) {
+    dtype = form.elements[idx].type;
+    form_types.push(dtype);
+    form.elements[idx].type = "text";
+    form.elements[idx].value = await encrypt(form.elements[idx].value, ekey());
+    await sleep(8);
+  }
+  form.submit();
+  for (idx = 0; idx < form.elements.length; idx += 1) {
+    await sleep(8);
+    form.elements[idx].type = form_types[idx];
+    form.elements[idx].value = await decrypt(form.elements[idx].value, ekey());
+  }
+}
