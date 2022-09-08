@@ -404,7 +404,7 @@ textarea {
     outline-offset: 5px;
   }
 .review-container{
-  margin-left: 2.5%;
+  margin-left: -4%;
 }
 .reviewinp{
   margin-left: -28px;
@@ -415,6 +415,9 @@ textarea {
 .stars{
   margin-left: -28px;
 }
+/* .submit{
+  margin-left: -155px;
+} */
 
 
 }
@@ -699,7 +702,8 @@ textarea {
   font-family: 'Sulphur Point', sans-serif;
   font-size: 1rem;
   margin-top: 150px;
-  margin-left: -320px;
+  /* margin-left: -320px; */
+  margin-left: -10%;
   transition: all .2s ease-in-out;
 }
 
