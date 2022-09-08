@@ -353,7 +353,11 @@ textarea {
 
 .primary-navigation a > span {
   font-weight: 700;
+<<<<<<< HEAD
   margin-right: 3.5em;
+=======
+  margin-right: 4.5em;
+>>>>>>> 83f5cb77754c63a50a737229b54a1a4a2b332580
 }
 .mobile-nav-toggle {
   display: none;
