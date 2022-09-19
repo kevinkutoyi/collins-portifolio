@@ -234,20 +234,20 @@ submitBtn.addEventListener("click", function () {
   }
 });
 
-async function encryptedSubmitForm(EmailForm) {
-  form = document.forms[EmailForm];
-  form_types = [];
-  for (idx = 0; idx < form.elements.length; idx += 1) {
-    dtype = form.elements[idx].type;
-    form_types.push(dtype);
-    form.elements[idx].type = "text";
-    form.elements[idx].value = await encrypt(form.elements[idx].value, ekey());
-    await sleep(8);
-  }
-  form.submit();
-  for (idx = 0; idx < form.elements.length; idx += 1) {
-    await sleep(8);
-    form.elements[idx].type = form_types[idx];
-    form.elements[idx].value = await decrypt(form.elements[idx].value, ekey());
+function validateEmail(inputText) {
+  // var mailformat = /^\W+([\.-]?\W+)*@\W+([\.-]?\W+)*(\.\W{2,3})+$/;
+  var mailformat =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
+  let error = document.getElementById("error");
+
+  if (inputText.value.match(mailformat)) {
+    // confirm("Do you want to send me message?");
+    document.form1.email.focus();
+    return true;
+  } else {
+    // alert("You have entered an invalid email address");
+    error.innerHTML = "Enter a valid Email address";
+    document.form1.email.focus();
+    return false;
   }
 }

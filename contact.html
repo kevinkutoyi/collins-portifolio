@@ -71,14 +71,15 @@
 
             </div>
             <div id="my-form">
-                <form action="mailto:collinscollolel@gmail.com"
+                <form name="form1" action="mailto:collinscollolel@gmail.com"
                 method="POST"
                 enctype="text/plain"
                 name="EmailForm" autocomplete="on">
+                <p id="error" style="color: red;"></p>
                 <input type="text" size="19" name="Name" placeholder="Name" required><br><br>
-                <input type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" size="19" name="email" placeholder="Email" required><br><br>
+                <input type="email" size="19" name="email" placeholder="Email" required><br><br>
                 <textarea rows="4" cols="50" name="Message" placeholder="Message" required></textarea><br>
-                <button type="submit" id="submit-btn" class="submit-btn" value="Submit" onclick="encryptedSubmitForm('new')" value="+">SEND</button> 
+                <button type="submit" id="submit-btn" class="submit-btn" value="Submit" onclick="validateEmail(document.form1.email)">SEND</button> 
                 </form>        
             </div>
         
