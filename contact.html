@@ -71,18 +71,15 @@
 
             </div>
             <div id="my-form">
-                <form name="form1" action="mailto:collinscollolel@gmail.com"
-                method="POST"
-                enctype="text/plain"
-                name="EmailForm" autocomplete="on">
+                <form onsubmit="sendEmail(); reset(); return false;"> 
                 <p id="error" style="color: red;"></p>
                 <input type="text" size="19" name="Name" placeholder="Name" required><br><br>
                 <input type="email" size="19" name="email" placeholder="Email" required><br><br>
                 <textarea rows="4" cols="50" name="Message" placeholder="Message" required></textarea><br>
-                <button type="submit" id="submit-btn" class="submit-btn" value="Submit" onclick="validateEmail(document.form1.email)">SEND</button> 
+                <button type="submit" id="submit-btn" class="submit-btn" value="Submit" >SEND</button> 
                 </form>        
             </div>
-        
+            <!-- name="form1" action="mailto:collinscollolel@gmail.com -->
         <!-- <div id="separator">
             <p id="paragraph5" style="color: #fff; margin-top: 25px;">If you are looking to create a cool website for your business, 
                 to collab or any other related services you can reach me 
@@ -99,6 +96,7 @@
         </footer>
         
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

@@ -233,6 +233,17 @@ submitBtn.addEventListener("click", function () {
     }
   }
 });
+function sendEmail() {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "Kevin Kutoyi",
+    Password: "0791549308",
+    To: "amoraghali@gmail.com",
+    From: "document.getElementById("email").value",
+    Subject: "New Contact Form Enquiry",
+    Body: "And this is the body",
+  }).then((message) => alert(message));
+}
 
 function validateEmail(inputText) {
   // var mailformat = /^\W+([\.-]?\W+)*@\W+([\.-]?\W+)*(\.\W{2,3})+$/;
