@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collins Lel</title>
+    <title>Lel | Developer</title>
+    <link rel="icon" type="image/x-icon" href="lap.jpg">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/fontawesome.min.css">
-    
     <script src="https://kit.fontawesome.com/457430ebc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="loader">
+        <img src="programing_man.gif" alt="my-loader">
+    </div>
     <div class="container">
         <nav id="navbar">
             <div id="name-img-section" class="row">
-                <img id="my-profile" src="collin.png" width="50px" height="50px">
-                <div id="hello-iam">Collins Lel</div>
+                <img id="my-profile" src="collin.png" width="120px" height="50px">
+                <div id="iam">Collins Lel</div>
             </div>
             <div class="night">
                 <div class="shooting_star"></div>
@@ -40,63 +43,56 @@
                 <div class="shooting_star"></div>
                 <div class="shooting_star"></div>
               </div>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation"><i class="fa-solid fa-bars fa-3x" style="color: red" aria-hidden="true"></i></button>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation"><i class="fa-solid fa-bars fa-2x" style="color: #fff" aria-hidden="true"></i></button>
             <ul id="primary-navigation" data-visible="false" class="primary-navigation">
                 <li><a href="home.html" class="nav_link">Home</a></li>
-                <li><a href="about.html" class="nav_link">About</a></li>
+                <li><a href="about.html" class="nav_link">Services</a></li>
                 <li><a href="projects.html" class="nav_link">Projects</a></li>
-                <li><a class="active nav_link" href="contact.html">Contact</a></li>
+                <!-- <li><a class="active nav_link" href="contact.html">Contact</a></li> -->
                 <li><a href="blog.html" class="nav_link">Blog</a></li>
             </ul>
         </nav>
         <main id="main">
-            <div id="contact-container">
             <div id="contact">
                 <h1>Contact me</h1>
-                <p id="paragraph7">I would like to help you make your ideas even better. Do you have
-                     a project in mind? Or need help in your company? 
-                     Feel free to contact me.
+                <p id="paragraph7">Do you have a project in mind, stuck with a digital problem or 
+                    need help with my skills and services? 
+                     Feel free to reach me.
                     </p>
                     <p id="paragraph6">If you hate forms, 
-                        you can reach me through the following social platforms,my preferred way to reach me is via twitter:
-                    
-                    <div id="icon">
-                        <i class="fa-brands fa-facebook fa-3x"></i>
-                        <i class="fa-brands fa-instagram fa-3x"></i>
-                        <i class="fa-brands fa-twitter fa-3x"></i>
-                        <i class="fa-brands fa-github fa-3x"></i>
-                    </div>
-                </p>    
+                        you can reach me through the following social platforms, my preferred media is twitter:
+                    <div id="icon" >
+                        <a href="https://github.com/Collins200" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
+                        <a href="https://twitter.com/CollinsLel" target="_blank"><i class="fa-brands fa-twitter fa-3x"></i></a>
+                        <a href="" target="_blank"><i class="fa-brands fa-discord fa-3x"></i></a>
+
+                        </div>
+                        </p>
 
 
             </div>
             <div id="my-form">
-                <form onsubmit="sendEmail(); reset(); return false;"> 
-                <p id="error" style="color: red;"></p>
-                <input type="text" size="19" name="Name" placeholder="Name" required><br><br>
-                <input type="email" size="19" name="email" placeholder="Email" required><br><br>
-                <textarea rows="4" cols="50" name="Message" placeholder="Message" required></textarea><br>
-                <button type="submit" id="submit-btn" class="submit-btn" value="Submit" >SEND</button> 
+                <form action="mailto:kevinkutoyi95@gmail.com"
+                method="POST"
+                enctype="text/plain"
+                name="EmailForm">
+                <input type="text" size="19" name="Name" placeholder="Enter Your Name" required><br><br>
+                <input type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" size="19" name="email" placeholder="Enter Your Email Address" required><br><br>
+                <textarea rows="4" cols="50" name="Message" placeholder="Write your message here..." required></textarea><br>
+                <button type="submit" id="submit-btn" class="submit-btn" value="Submit">SEND</button> 
                 </form>        
             </div>
-            <!-- name="form1" action="mailto:collinscollolel@gmail.com -->
-        <!-- <div id="separator">
-            <p id="paragraph5" style="color: #fff; margin-top: 25px;">If you are looking to create a cool website for your business, 
-                to collab or any other related services you can reach me 
-                via twitter or contact me.
-            </p>
-        </div> -->
-    </div>
+            <p id="paragraph5" style="color: #fff;">If you are looking to create a system, collaborate on an innovation project
+                or build a system you can reach me.</p>
         </main>
 
-        <footer class="row">
-            <p>Collins Lel 2022</p>&nbsp;
-            <p> &copy All Rights Reserved</p>
+        <footer id="foot" class="row">
+            <p>Collins Lel  &copy 2022</p>&nbsp;
+            <p>All Rights Reserved</p>
 
         </footer>
         
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

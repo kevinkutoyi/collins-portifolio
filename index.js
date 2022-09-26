@@ -1,3 +1,9 @@
+var loader = document.querySelector(".loader");
+window.addEventListener("load", vanish);
+function vanish() {
+  loader.classList.toggle("disappear");
+}
+
 const nav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
@@ -233,32 +239,3 @@ submitBtn.addEventListener("click", function () {
     }
   }
 });
-function sendEmail() {
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "Kevin Kutoyi",
-    Password: "0791549308",
-    To: "amoraghali@gmail.com",
-    From: "document.getElementById("email").value",
-    Subject: "New Contact Form Enquiry",
-    Body: "And this is the body",
-  }).then((message) => alert(message));
-}
-
-function validateEmail(inputText) {
-  // var mailformat = /^\W+([\.-]?\W+)*@\W+([\.-]?\W+)*(\.\W{2,3})+$/;
-  var mailformat =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
-  let error = document.getElementById("error");
-
-  if (inputText.value.match(mailformat)) {
-    // confirm("Do you want to send me message?");
-    document.form1.email.focus();
-    return true;
-  } else {
-    // alert("You have entered an invalid email address");
-    error.innerHTML = "Enter a valid Email address";
-    document.form1.email.focus();
-    return false;
-  }
-}

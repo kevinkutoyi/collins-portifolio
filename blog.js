@@ -1,4 +1,9 @@
-"use strict";
+("use strict");
+var loader = document.querySelector(".loader");
+window.addEventListener("load", vanish);
+function vanish() {
+  loader.classList.toggle("disappear");
+}
 
 // navbar variables
 const nav = document.querySelector(".mobile-nav");
@@ -87,7 +92,7 @@ $(document).ready(function () {
       var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
       $(this).empty().html(newStr);
       $(this).append(
-        ' <a href="javascript:void(0);" class="read-more">...read more...</a>'
+        ' <a href="javascript:void(0);" class="read-more">....read more...</a>'
       );
       $(this).append('<span class="more-text">' + removedStr + "</span>");
     }
