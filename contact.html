@@ -72,13 +72,10 @@
 
             </div>
             <div id="my-form">
-                <form action="mailto:kevinkutoyi95@gmail.com"
-                method="POST"
-                enctype="text/plain"
-                name="EmailForm">
-                <input type="text" size="19" name="Name" placeholder="Enter Your Name" required><br><br>
-                <input type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" size="19" name="email" placeholder="Enter Your Email Address" required><br><br>
-                <textarea rows="4" cols="50" name="Message" placeholder="Write your message here..." required></textarea><br>
+                <form class="contact_form" action="#">
+                <input class="name" type="text" size="19" name="Name" placeholder="Enter Your Name" required><br><br>
+                <input class="email" type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" size="19" name="email" placeholder="Enter Your Email Address" required><br><br>
+                <textarea class="msg" rows="4" cols="50" name="Message" placeholder="Write your message here..." required></textarea><br>
                 <button type="submit" id="submit-btn" class="submit-btn" value="Submit">SEND</button> 
                 </form>        
             </div>
@@ -94,5 +91,7 @@
         
     </div>
     <script src="index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 </body>
 </html>
