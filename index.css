@@ -20,7 +20,7 @@ body {
   z-index: 99;
 }
 #my-skills{
-  margin-left: 30px;
+  margin-left: 28px;
 }
 .loader{
   position: fixed;
@@ -35,7 +35,7 @@ body {
   z-index: 2000;
 }
 .disappear{
-  animation: vanish 5s forwards;
+  animation: vanish 2s forwards;
 }
 @keyframes vanish{
   100%{
@@ -163,15 +163,8 @@ body {
   overflow: hidden;
   white-space: nowrap;
   font-family: consolas;
+  /* display: none; */
   width: 12ch;
-}
-@keyframes type{
-  0%{
-    width: 0ch;
-  }
-  100%{
-    width: 12ch
-  }
 }
 #img-right{
   float: right;
@@ -229,7 +222,8 @@ body {
   margin-top: 5px;
 }
 #icon{
-  margin-left: 15em;
+  margin-left: 20em;
+  /* padding-left: 15%; */
 }
 i{
  color: #FFD700;
@@ -408,11 +402,26 @@ textarea {
     outline: 5px solid white;
     outline-offset: 5px;
   }
+  #icon{
+    /* margin-left: 20em; */
+    padding-left: 23%;
+  }
 }
 @media (max-width: 720px) {
   #img-right{
     display: none;
   }
+}
+@media (min-width: 63rem) {
+  #icon{
+    margin-left: 13em;
+    /* margin-left: 20em; */
+    /* padding-left: 12%; */
+  }
+  #my-form{
+    padding-top: 3%;
+  }
+
 }
 @media (max-width: 63.5rem) {
   #my-form{
@@ -430,6 +439,7 @@ textarea {
    min-width: 80%;  
   }
   #paragraph7{
+   padding-bottom: 45px;
    padding-left: 2%;
    min-width: 80%;
    display: flex;
@@ -437,6 +447,7 @@ textarea {
   }
   #icon{
    margin-bottom: -5em;
+    padding-left: 23%;
    margin-left: 10%;
   }
   #paragraph1 {
@@ -470,6 +481,7 @@ textarea {
     align-items: center;
     margin-left: 15%;
    }
+
 } 
  @media (min-width: 62.5rem) and (max-width: 63.5rem) {
   #my-form{
@@ -834,5 +846,5 @@ color: #FFD700;
   0% {
     transform: translateX(0); }
   100% {
-    transform: translateX(300px); } }
-
+    transform: translateX(300px); } 
+  }
