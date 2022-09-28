@@ -35,7 +35,7 @@ body {
   z-index: 2000;
 }
 .disappear{
-  animation: vanish 2s forwards;
+  animation: vanish 3s forwards;
 }
 @keyframes vanish{
   100%{

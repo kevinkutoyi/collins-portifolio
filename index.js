@@ -1,21 +1,16 @@
-const form = document.querySelector(".contact_form");
 function sendMsg(e) {
   e.preventDefault();
-  const name = document.querySelector(".name");
-  const email = document.querySelector(".email");
-  const msg = document.querySelector(".msg");
-
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "amoraghali@gmail.com",
     Password: "3A8269ACC8B958DF9B727474364B2381BB48",
     To: "amoraghali@gmail.com",
-    From: "email.value",
+    From: document.querySelector(".email").value,
     Subject: "This is my Subject",
-    Body: "msg.value",
+    Body: document.querySelector(".msg").value,
   }).then((message) => alert(message));
 }
-form.addEventListener("submit", sendMsg);
+// form.addEventListener("submit", sendMsg);
 
 var loader = document.querySelector(".loader");
 window.addEventListener("load", vanish);

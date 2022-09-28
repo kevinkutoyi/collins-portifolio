@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="loader">
-        <img src="programing_man.gif" alt="my-loader">
+        <img src="loading.webp" alt="my-loader">
     </div>
     <div class="container">
         <nav id="navbar">
@@ -72,11 +72,11 @@
 
             </div>
             <div id="my-form">
-                <form class="contact_form" action="#">
+                <form onsubmit="sendMsg(); reset(); return false;" class="contact_form">
                 <input class="name" type="text" size="19" name="Name" placeholder="Enter Your Name" required><br><br>
-                <input class="email" type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" size="19" name="email" placeholder="Enter Your Email Address" required><br><br>
+                <input class="email" type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" size="19" placeholder="Enter Your Email Address" required><br><br>
                 <textarea class="msg" rows="4" cols="50" name="Message" placeholder="Write your message here..." required></textarea><br>
-                <button type="submit" id="submit-btn" class="submit-btn" value="Submit">SEND</button> 
+                <button type="submit" id="submit-btn" class="submit-btn">SEND</button> 
                 </form>        
             </div>
             <!-- <p id="paragraph5" style="color: #fff;">If you are looking to create a system, collaborate on an innovation project
@@ -86,12 +86,10 @@
         <footer id="foot" class="row">
             <p>Collins Lel  &copy 2022</p>&nbsp;
             <p>All Rights Reserved</p>
-
         </footer>
         
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
 </body>
 </html>
