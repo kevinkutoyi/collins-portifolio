@@ -1,14 +1,38 @@
-function sendMsg(e) {
-  e.preventDefault();
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "amoraghali@gmail.com",
-    Password: "3A8269ACC8B958DF9B727474364B2381BB48",
-    To: "amoraghali@gmail.com",
-    From: document.querySelector(".email").value,
-    Subject: "This is my Subject",
-    Body: document.querySelector(".msg").value,
-  }).then((message) => alert(message));
+const validateEmail = (element) => {
+  const regex =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if (!regex.test(element.value)) {
+    document.getElementById("error").innerHTML = "Error";
+    // element.parentElement.classList.add("error");
+    return false;
+  } else {
+    // element.parentElement.classList.remove("error");
+    document.getElementById("error").innerHTML = "Success";
+
+    return true;
+  }
+};
+function sendMail(e) {
+  // e.preventDefault();
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_xqbt3bw";
+  const templateID = "template_ddh1jxi";
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res) => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("Your message was sent successfully");
+    })
+    .catch((err) => console.log(err));
 }
 // form.addEventListener("submit", sendMsg);
 

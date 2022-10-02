@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,15 @@
     <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/457430ebc3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("eNl7P-EkJ8YY2xn5s");
+        })();
+    </script>
 </head>
+
 <body>
     <div class="loader">
         <img src="loading.webp" alt="my-loader">
@@ -42,8 +51,9 @@
                 <div class="shooting_star"></div>
                 <div class="shooting_star"></div>
                 <div class="shooting_star"></div>
-              </div>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation"><i class="fa-solid fa-bars fa-2x" style="color: #fff" aria-hidden="true"></i></button>
+            </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation"><i class="fa-solid fa-bars fa-2x"
+                    style="color: #fff" aria-hidden="true"></i></button>
             <ul id="primary-navigation" data-visible="false" class="primary-navigation">
                 <li><a href="home.html" class="nav_link">Home</a></li>
                 <li><a href="about.html" class="nav_link">Services</a></li>
@@ -55,41 +65,47 @@
         <main id="main">
             <div id="contact">
                 <h1>Contact me</h1>
-                <p id="paragraph7">Do you have a project in mind, stuck with a digital problem or 
-                    need help with my skills and services? 
-                     Feel free to reach me.
-                    </p>
-                    <p id="paragraph6">If you hate forms, 
-                        you can reach me through the following social platforms, my preferred media is twitter:
-                    <div id="icon" >
-                        <a href="https://github.com/Collins200" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
-                        <a href="https://twitter.com/CollinsLel" target="_blank"><i class="fa-brands fa-twitter fa-3x"></i></a>
-                        <a href="" target="_blank"><i class="fa-brands fa-discord fa-3x"></i></a>
+                <p id="paragraph7">Do you have a project in mind, stuck with a digital problem or
+                    need help with my skills and services?
+                    Feel free to reach me.
+                </p>
+                <p id="paragraph6">If you hate forms,
+                    you can reach me through the following social platforms, my preferred media is twitter:
+                <div id="icon">
+                    <a href="https://github.com/Collins200" target="_blank"><i
+                            class="fa-brands fa-github fa-3x"></i></a>
+                    <a href="https://twitter.com/CollinsLel" target="_blank"><i
+                            class="fa-brands fa-twitter fa-3x"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-discord fa-3x"></i></a>
 
-                        </div>
-                        </p>
+                </div>
+                </p>
 
 
             </div>
             <div id="my-form">
-                <form onsubmit="sendMsg(); reset(); return false;" class="contact_form">
-                <input class="name" type="text" size="19" name="Name" placeholder="Enter Your Name" required><br><br>
-                <input class="email" type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" size="19" placeholder="Enter Your Email Address" required><br><br>
-                <textarea class="msg" rows="4" cols="50" name="Message" placeholder="Write your message here..." required></textarea><br>
-                <button type="submit" id="submit-btn" class="submit-btn">SEND</button> 
-                </form>        
+                <form onsubmit="sendMail(); reset(); return false">
+                    <p style="color: red" id="error"></p>
+                    <input type="text" size="19" id="name" name="Name" placeholder="Enter Your Name" /><br><br>
+                    <input type="email" id="email" size="19" name="email"
+                        placeholder="Enter Your Email Address" /><br><br>
+                    <textarea id="message" rows="4" cols="50" name="Message" placeholder="Write your message here..."
+                        required></textarea><br>
+                    <button type="submit" id="submit-btn" class="submit-btn" onclick="sendail()">SEND</button>
+                </form>
             </div>
             <!-- <p id="paragraph5" style="color: #fff;">If you are looking to create a system, collaborate on an innovation project
                 or build a system you can reach me.</p> -->
         </main>
 
         <footer id="foot" class="row">
-            <p>Collins Lel  &copy 2022</p>&nbsp;
+            <p>Collins Lel &copy 2022</p>&nbsp;
             <p>All Rights Reserved</p>
         </footer>
-        
+
     </div>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
