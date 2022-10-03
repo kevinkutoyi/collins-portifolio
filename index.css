@@ -5,7 +5,17 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background-image: linear-gradient(blue, navy);
+  /* background: url('bg.png'), darkblue; */
+  background-color: darkblue;
+  /* background-image: url("bg.png"); */
+  /* background-position: right; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
+  /* z-index: 99; */
+  /* background-image: linear-gradient(blue, navy); */
+  
+  /* opacity: 0.29; */
 }
 .card a{
   color: gray;
@@ -97,7 +107,8 @@ body {
   padding-bottom: 10px;
   padding-right: 45px;
   z-index: 99;
-  background-color: blue;
+  /* background-color: blue; */
+  background-color: navy;
   /* background-color: #2A2A72; */
   /* border-bottom: 1px solid #fff; */
   /* margin-bottom: 100px; */
