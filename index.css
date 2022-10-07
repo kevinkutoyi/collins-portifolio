@@ -7,15 +7,6 @@
 body {
   /* background: url('bg.png'), darkblue; */
   background-color: darkblue;
-  /* background-image: url("bg.png"); */
-  /* background-position: right; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-attachment: fixed; */
-  /* z-index: 99; */
-  /* background-image: linear-gradient(blue, navy); */
-  
-  /* opacity: 0.29; */
 }
 .card a{
   color: gray;
@@ -463,7 +454,7 @@ textarea {
   }
   #paragraph1 {
     color: white;
-    border: 3px solid #fff;
+    border: 3px solid #FFD700;
     width: 55%;
     min-width: 90%;
     margin: 175px auto 49px;
